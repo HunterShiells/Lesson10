@@ -53,6 +53,8 @@ public class StringReview {
         System.out.println("Bib".compareTo("Bob")); //-6
         
         //compareTo = 0 = exact match
+        
+        System.out.println("Thats all folks");
     }
     
 }
