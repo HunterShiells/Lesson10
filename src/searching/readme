@@ -1,0 +1,28 @@
+SEARCHING THEORY
+===================
+
+- 2 popular ways to search thru a list (of String, objects,numbers, etc)
+
+LINEAR SEARCH - Start at the first item move down 1 at a time until match is found
+- if not match, it wont know until it goes through the entire list.
+
+BINARY SEARCH - Start at middle point of list. if item is higher, adjust left side to midpoint + 1
+- If item is lower, adjust right side to midpoint -1. Search at new midpoint and repeat until either item 
+is found or left and right sides collide with each other.
+
+- binary search can only be used if items are sorted in some way (alpha and numeric)
+
+OBJECTS And SEARCHING 
+========================
+Objects from Classes can be searchable if class implements comparable
+
+public class Something implements Comparable<Something>{}
+
+- then you decide which instance variable (property) will be used for searching / comparing purposes
+- Lastly, you include a compareTo method that returns a comparison of the property with another same type of object
+- compareTo returns an 'int' so if you are comparing to String's you can use the string compareTo on that property
+- For int's you can do a calculated difference between the two values, or just return 1, -1, or 0 depending on which
+one is greater
+
+- Then the collections of objects you are searching through must be sorted by the compareTo property in or to 
+do a binary search
