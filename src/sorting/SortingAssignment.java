@@ -98,15 +98,12 @@ public class SortingAssignment extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btngenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngenActionPerformed
-        list.clear();
-        for(int x = 1; x<=50000; x++){
-            list.addElement("" + (int)(Math.random()*50000));
-        }
-        lstnumms.setModel(list);
+        lstnumms.setModel(s.sortnums());
     }//GEN-LAST:event_btngenActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int l[] = new int[50000];
+        list = s.sortnums();
         for(int x = 0; x< l.length; x++){
             l[x] = Integer.parseInt((String) list.elementAt(x));
         }
@@ -120,6 +117,7 @@ public class SortingAssignment extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         int l[] = new int[50000];
+        list = s.sortnums();
         for(int x = 0; x< l.length; x++){
             l[x] = Integer.parseInt((String) list.elementAt(x));
         }
@@ -132,6 +130,7 @@ public class SortingAssignment extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         int l[] = new int[50000];
+        list = s.sortnums();
         for(int x = 0; x< l.length; x++){
             l[x] = Integer.parseInt((String) list.elementAt(x));
         }

@@ -1,62 +1,74 @@
-
 package sorting;
 
-public class Sorter {
-    
+import javax.swing.DefaultListModel;
 
- public static void selectionSort(int[] a ){
-        for (int i = 0; i < a.length-1; i++) {
-            int minIndex = findMinimum(a,i);
-            if(minIndex!=1) swap(a,i,minIndex);
+public class Sorter{
+
+    public static void selectionSort(int[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            int minIndex = findMinimum(a, i);
+            if (minIndex != 1) {
+                swap(a, i, minIndex);
+            }
         }
     }
-    
-    public static int findMinimum(int[] a, int first){
+
+    public static int findMinimum(int[] a, int first) {
         int minIndex = first;
-        for (int i = first +1; i < a.length; i++) {
-            if(a[i] < a[minIndex]) minIndex = i;
+        for (int i = first + 1; i < a.length; i++) {
+            if (a[i] < a[minIndex]) {
+                minIndex = i;
+            }
         }
         return minIndex;
     }
-    
-    public static void bubbleSort(int[] a){
-        int k =0;
+
+    public static void bubbleSort(int[] a) {
+        int k = 0;
         boolean exchangeMade = true;
-        while((k< a.length -1) && exchangeMade){
-         exchangeMade = false;
-         k++;
-            for (int j = 0; j < a.length-k; j++) {
-                if(a[j] > a[j+1]){
-                    swap(a,j,j+1);
+        while ((k < a.length - 1) && exchangeMade) {
+            exchangeMade = false;
+            k++;
+            for (int j = 0; j < a.length - k; j++) {
+                if (a[j] > a[j + 1]) {
+                    swap(a, j, j + 1);
                     exchangeMade = true;
                 }
             }
         }
     }
-    
-    public static void swap(int[] a, int x, int y){
+
+    public static void swap(int[] a, int x, int y) {
         int temp = a[x];
         a[x] = a[y];
         a[y] = temp;
     }
-    
-    public static void insertionSort(int a[]){
+
+    public static void insertionSort(int a[]) {
         int itemToInsert, j;
         boolean stillLooking;
-        
-        for (int i = 1; i < a.length; i++) {
-            itemToInsert = a[i];
-            j = i-1;
+        for (int k = 1; k < a.length; k++) {
+            itemToInsert = a[k];
+            j = k - 1;
             stillLooking = true;
-            while(j>=0&&stillLooking){
-                if(itemToInsert < a[j]){
-                    a[j+1] = a[j];
+            while (j >= 0 && stillLooking) {
+                if (itemToInsert < a[j]) {
+                    a[j + 1] = a[j];
                     j--;
-                }else{
+                } else {
                     stillLooking = false;
-                    a[j+1] = itemToInsert;
                 }
+                a[j + 1] = itemToInsert;
             }
         }
+    }
+
+    public static DefaultListModel sortnums() {
+        DefaultListModel list = new DefaultListModel();
+        list.clear();
+        for (int x = 1; x <= 50000; x++) {
+            list.addElement("" + (int) (Math.random() * 50000));
+        }
+        return list;
     }
 }
