@@ -4,9 +4,11 @@ package insertRemoveArraylist;
 public class Person implements Comparable<Person>{
     private String name;
     private int age;
-    public Person(String nm, int ag){
+    private String gender;
+    public Person(String nm, int ag, String g){
         name = nm;
         age = ag;
+        gender = g;
     }
     public String getName(){
         return name;
@@ -18,6 +20,9 @@ public class Person implements Comparable<Person>{
 
     public int getAge() {
         return age;
+    }
+    public String getGender(){
+        return gender;
     }
 
     @Override
