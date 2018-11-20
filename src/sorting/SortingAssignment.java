@@ -108,6 +108,7 @@ public class SortingAssignment extends javax.swing.JFrame {
 
     private void btngenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngenActionPerformed
         lstnumms.setModel(s.sortnums());
+        lbl1.setText("Time Passed: ");
     }//GEN-LAST:event_btngenActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
