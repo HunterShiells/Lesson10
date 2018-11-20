@@ -10,6 +10,10 @@ public class Person implements Comparable<Person>{
         age = ag;
         gender = g;
     }
+    public Person(String nm, int ag){
+        name = nm;
+        age = ag;
+    }
     public String getName(){
         return name;
     }
