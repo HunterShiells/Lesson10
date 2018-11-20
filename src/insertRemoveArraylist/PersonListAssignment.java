@@ -329,6 +329,7 @@ public class PersonListAssignment extends javax.swing.JFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         btnmale.setEnabled(true);
         btnfemal.setEnabled(true);
+        list.clear();
         for(Person p:people){
             list.addElement(p.getName());
         }
