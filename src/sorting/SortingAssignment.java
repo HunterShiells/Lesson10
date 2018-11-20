@@ -7,7 +7,7 @@ public class SortingAssignment extends javax.swing.JFrame {
     public DefaultListModel list = new DefaultListModel();
 
     Sorter s = new Sorter();
-
+    double start ,end, tot;
     public SortingAssignment() {
         initComponents();
 
@@ -111,6 +111,7 @@ public class SortingAssignment extends javax.swing.JFrame {
     }//GEN-LAST:event_btngenActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        start = System.currentTimeMillis();
         int l[] = new int[50000];
         list = s.sortnums();
         for (int x = 0; x < l.length; x++) {
@@ -120,10 +121,14 @@ public class SortingAssignment extends javax.swing.JFrame {
         for (int i = 0; i < l.length; i++) {
             list.set(i, l[i]);
         }
+        end = System.currentTimeMillis();
+        tot = (end - start) /1000;
         lstnumms.setModel(list);
+        lbl1.setText("Time Passed: " + tot);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        start = System.currentTimeMillis();
         int l[] = new int[50000];
         list = s.sortnums();
         for (int x = 0; x < l.length; x++) {
@@ -133,10 +138,14 @@ public class SortingAssignment extends javax.swing.JFrame {
         for (int i = 0; i < l.length; i++) {
             list.set(i, l[i]);
         }
+        end = System.currentTimeMillis();
+        tot = (end - start) /1000;
         lstnumms.setModel(list);
+        lbl1.setText("Time Passed: " + tot);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        start = System.currentTimeMillis();
         int l[] = new int[50000];
         list = s.sortnums();
         for (int x = 0; x < l.length; x++) {
@@ -146,7 +155,10 @@ public class SortingAssignment extends javax.swing.JFrame {
         for (int i = 0; i < l.length; i++) {
             list.set(i, l[i]);
         }
+        end = System.currentTimeMillis();
+        tot = (end - start) /1000;
         lstnumms.setModel(list);
+        lbl1.setText("Time Passed: " + tot);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
