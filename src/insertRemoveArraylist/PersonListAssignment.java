@@ -222,7 +222,7 @@ public class PersonListAssignment extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtname)
                             .addComponent(txtage, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -296,8 +296,13 @@ public class PersonListAssignment extends javax.swing.JFrame {
             gender = "F";
         }
         Person newp = new Person(name,age,gender);
-        int loc = findInsertPoint(people,newp);
-        people.add(loc, newp);
+        if(people.size() > 0){
+            int loc = findInsertPoint(people,newp);
+            people.add(loc, newp);
+        }
+        else{
+            people.add(newp);
+        }
         list.clear();
         for(Person p:people){
             list.addElement(p.getName());
